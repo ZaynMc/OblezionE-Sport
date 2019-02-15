@@ -1,0 +1,23 @@
+{
+  "name": "Oblezion Boss",
+  "version": "1.0.0",
+  "description": "Oblezion Boss",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "ZaynMc",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^11.4.2",
+    "ffmpeg": "0.0.4",
+    "ffmpeg-binaries": "^4.0.0",
+    "fortnite": "^4.1.1",
+    "fs": "0.0.1-security",
+    "ms": "^2.1.1",
+    "opusscript": "0.0.6",
+    "superagent": "^4.0.0-beta.5",
+    "ytdl-core": "^0.28.0",
+    "quick.db": "7.0.0-b19"
+  }
+}
