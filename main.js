@@ -145,7 +145,7 @@ bot.on("message", async message => {
             SEND_MESSAGES: true
           });
 
-          channel.overwritePermissions(ascalonall, {
+          channel.overwritePermissions(everyone, {
             CREATE_INSTANT_INVITE: false,
             KICK_MEMBERS: false,
             BAN_MEMBERS: false,
