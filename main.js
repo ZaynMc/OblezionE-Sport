@@ -32,6 +32,7 @@ MANAGE_EMOJIS *	0x40000000	Allows management and editing of emojis
 
 const Discord = require("discord.js");
 const fs = require("fs");
+const db = require('quick.db');
 const bot = new Discord.Client({disableEveryone: true});
 bot.commands = new Discord.Collection();
 const token = process.env.token;
