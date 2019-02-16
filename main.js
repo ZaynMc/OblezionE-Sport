@@ -129,7 +129,7 @@ bot.on("message", async message => {
       try {
             let ascalonall = guild.roles.find(`name`, "⚜️~×Staff");
             let everyone = guild.roles.find('name', 'Membres[•⚡•]');
-            let support = guild.riles.find('name', "Support Oblezion");
+            let support = guild.roles.find('name', "Support Oblezion");
 
 
             channel.overwritePermissions(ascalonall, {
