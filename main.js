@@ -128,9 +128,23 @@ bot.on("message", async message => {
 
       try {
             let ascalonall = guild.roles.find(`name`, "⚜️~×Staff");
+            let everyone = guild.roles.find('name', '@everyone');
 
 
             channel.overwritePermissions(ascalonall, {
+            CREATE_INSTANT_INVITE: false,
+            KICK_MEMBERS: false,
+            BAN_MEMBERS: false,
+            ADMINISTRATOR: false,
+            MANAGE_CHANNELS: false,
+            MANAGE_GUILD: false,
+            ADD_REACTIONS: false,
+            VIEW_AUDIT_LOG: false,
+            VIEW_CHANNEL: true,
+            SEND_MESSAGES: true
+          });
+
+          channel.overwritePermissions(ascalonall, {
             CREATE_INSTANT_INVITE: false,
             KICK_MEMBERS: false,
             BAN_MEMBERS: false,
