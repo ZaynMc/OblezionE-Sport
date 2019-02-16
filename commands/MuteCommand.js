@@ -8,7 +8,8 @@ module.exports.run = async (bot, message, args, ops) => {
   message.delete();
 
   let tomute = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
-  if(!tomute) return;
+  if(!tomute) return message.reply(`Le joueur n'a pas été trouver.`).then(message => message.delete(5000));
+
 
   let muterole = message.guild.roles.find(`name`, 'muted');
   //start of create role
