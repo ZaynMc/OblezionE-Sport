@@ -1,11 +1,21 @@
 module.exports.run = async (bot, message, args, ops) => {
 
     message.delete();
+    
+    if(!message.channel.permissionsFor(message.member).hasPermission("MANAGE_MESSAGES")) {
+
+      //message deleted
+      message.delete();
+  
+      message.reply("Vous ne pouvez pas utiliser cette commande.").then(message => message.delete(5000));
+  
+      //Return
+      return;
+  }
     //CHECK IF MENTION USER EXIST
     let tomute = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
     if(!tomute) return;
   
-    if(tomute.hasPermission("MANAGE_MESSAGES")) return;
     let muterole = message.guild.roles.find(`name`, 'muted');
   
     if(message.member.roles.has(muterole.id)) {

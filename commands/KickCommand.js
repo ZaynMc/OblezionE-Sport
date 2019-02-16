@@ -6,6 +6,9 @@ module.exports.run = async (bot, message, args, ops) => {
 
     if(args[0] == null) {
         message.delete();
+
+        message.reply(`Vous n'avez pas précisez ou le joueur n'existe pas, l'usage correcte de cette commande est : **.kick @User**`);
+
         return;
     }
 

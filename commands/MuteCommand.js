@@ -7,8 +7,20 @@ module.exports.run = async (bot, message, args, ops) => {
 
   message.delete();
 
+  if(!message.channel.permissionsFor(message.member).hasPermission("MANAGE_MESSAGES")) {
+
+    //message deleted
+    message.delete();
+
+    message.reply("Vous ne pouvez pas utiliser cette commande.").then(message => message.delete(5000));
+
+    //Return
+    return;
+}
+
+
   let tomute = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
-  if(!tomute) return message.reply(`Le joueur n'a pas été trouver.`).then(message => message.delete(5000));
+  if(!tomute) return message.reply(`Vous n'avez pas précisez ou le joueur n'existe pas, l'usage correcte de cette commande est : **.mute @User 1s/m/h/d**`).then(message => message.delete(5000));
 
 
   let muterole = message.guild.roles.find(`name`, 'muted');

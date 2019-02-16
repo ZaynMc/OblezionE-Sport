@@ -10,6 +10,9 @@ module.exports.run = async (bot, message, args, ops) => {
         //message deleted
         message.delete();
 
+        //message reply
+        message.reply(`Vous n'avez pas précisez ou le joueur n'existe pas, l'usage correcte de cette commande est : **.ban @User raison**`);
+
         //Return
         return;
     }
