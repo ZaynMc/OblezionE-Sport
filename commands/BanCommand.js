@@ -1,6 +1,6 @@
 const Discord = require("discord.js");
 
-module.exports.run = async (bot, message, args, ops, tools) => {
+module.exports.run = async (bot, message, args, ops) => {
 
 
 
@@ -19,9 +19,6 @@ module.exports.run = async (bot, message, args, ops, tools) => {
 
         //message deleted
         message.delete();
-
-        //LOG
-        tools.log(message.author.name + "NOT PERMISSION TO BAN PLAYER", message)
 
         //Return
         return;

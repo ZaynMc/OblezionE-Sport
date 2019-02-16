@@ -1,4 +1,4 @@
-module.exports.run = async (bot, message, args, ops, tools) => {
+module.exports.run = async (bot, message, args, ops) => {
 
     message.delete();
     //CHECK IF MENTION USER EXIST
