@@ -59,6 +59,21 @@ module.exports.run = async (bot, message, args, ops) => {
 
     let rreason = args.join(" ").slice(22);
     message.guild.member(member).ban(rreason);
+
+    message.channel.send({embed: {
+        color: 3447003,
+        author: {
+          name: "Oblezion Boss",
+          icon_url: "https://i.imgur.com/qQoSPge.jpg"
+        },
+        title: `Le joueur ${member.user.username} est banni, raison : ${rreason} !`,
+        timestamp: new Date(),
+        footer: {
+          icon_url: "https://i.imgur.com/318H4Xw.png",
+          text: "© Created by Zayn#0607"
+        }
+      }
+    });
 }
 
 module.exports.help = {

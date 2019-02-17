@@ -34,7 +34,24 @@ module.exports.run = async (bot, message, args, ops) => {
         return;
     }
 
-    member.kick("ASCALON BOT");
+    member.kick("BOT");
+
+    message.channel.send({embed: {
+        color: 3447003,
+        author: {
+          name: "Oblezion Boss",
+          icon_url: "https://i.imgur.com/qQoSPge.jpg"
+        },
+        title: `Le joueur ${member.user.username} est kick !`,
+        timestamp: new Date(),
+        footer: {
+          icon_url: "https://i.imgur.com/318H4Xw.png",
+          text: "© Created by Zayn#0607"
+        }
+      }
+    });
+
+
 }
 
 module.exports.help = {

@@ -21,12 +21,25 @@ module.exports.run = async (bot, message, args, ops) => {
     if(message.member.roles.has(muterole.id)) {
       //REMOVE ROLE TO USER
       tomute.removeRole(muterole.id);
-      //LOG
-      tools.log('CHECK COMMAND MUTE REMOVE ROLE', message);
+      
       //SEND MESSAGE FOR VALID UNMUTE
-      message.channel.send(`<@${tomute.id}> est unmute !`).then(message => message.delete(5000));
-      //LOG
-      tools.log('CHECK COMMAND MUTE SEND MESSAGE TO PLAYER', message);
+      //message.channel.send(`<@${tomute.id}> est unmute !`).then(message => message.delete(5000));
+
+      message.channel.send({embed: {
+        color: 3447003,
+        author: {
+          name: "Oblezion Boss",
+          icon_url: "https://i.imgur.com/qQoSPge.jpg"
+        },
+        title: `Le joueur <@${tomute.id}> à été unmute !`,
+        timestamp: new Date(),
+        footer: {
+          icon_url: "https://i.imgur.com/318H4Xw.png",
+          text: "© Created by Zayn#0607"
+        }
+      }
+    });
+    
   }
   }
   
