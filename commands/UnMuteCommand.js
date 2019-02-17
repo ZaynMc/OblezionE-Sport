@@ -31,7 +31,7 @@ module.exports.run = async (bot, message, args, ops) => {
           name: "Oblezion Boss",
           icon_url: "https://i.imgur.com/qQoSPge.jpg"
         },
-        title: `Le joueur <@${tomute.displayName}> à été unmute !`,
+        title: `Le joueur ${tomute.displayName} à été unmute !`,
         timestamp: new Date(),
         footer: {
           icon_url: "https://i.imgur.com/318H4Xw.png",
