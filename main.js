@@ -128,7 +128,7 @@ bot.on("message", async message => {
 
       try {
             let ascalonall = guild.roles.find(`name`, "⚜️~×Staff");
-            let everyone = guild.roles.find('name', 'Membres[•⚡•]');
+            let everyone = guild.roles.find('name', '@everyone');
             let support = guild.roles.find('name', "Support Oblezion");
 
 
